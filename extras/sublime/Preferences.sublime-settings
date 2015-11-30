@@ -1,0 +1,119 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete": true,
+	"auto_complete_selector": "source - comment, meta.tag - punctuation.definition.tag.begin, text.haml",
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": ".",
+			"selector": "source, text.html"
+		},
+		{
+			"characters": "ng-controller=\"*",
+			"selector": "punctuation.definition.string"
+		},
+		{
+			"characters": ".",
+			"selector": "source.python"
+		}
+	],
+	"bold_folder_labels": true,
+	"caret_extra_width": 0,
+	"caret_style": "phase",
+	"centurion_color_blue": true,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/User/SublimeLinter/CustomTomorrowNightBright (SL).tmTheme",
+	"detect_slow_plugins": true,
+	"dfw_hide_fold_buttons": false,
+	"dfw_hide_gutter": false,
+	"dfw_hide_line_numbers": false,
+	"dfw_hide_minimap": true,
+	"dfw_hide_side_bar": true,
+	"dfw_hide_status_bar": false,
+	"dfw_hide_tabs": true,
+	"dfw_switch_to_single_layout": true,
+	"draw_minimap_border": false,
+	"draw_white_space": "selection",
+	"enable_tab_scrolling": true,
+	"ensure_newline_at_eof_on_save": true,
+	"faarikaal_hide_folds": false,
+	"faarikaal_hide_icons": false,
+	"faarikaal_skeleton": false,
+	"fade_fold_buttons": false,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.pid",
+		"*.pyc",
+		"*.pyo"
+	],
+	"find_selected_text": true,
+	"fold_buttons": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		"__pycache__",
+		"env",
+		"env3"
+	],
+	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 13,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"BufferScroll",
+		"File Rename",
+		"JavaScript",
+		"Vintage",
+		"VintageousOrigami",
+	],
+	"inverse_caret_state": false,
+	"itg_sidebar_tree_large": false,
+	"itg_xsmall_tabs": true,
+	"line_numbers": true,
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"margin": 4,
+	"match_brackets_angle": true,
+	"numix_sidebar_tree_large": false,
+	"numix_xsmall_tabs": true,
+	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
+	"remember_color_scheme": false,
+	"rulers":
+	[
+		72,
+		79
+	],
+	"scroll_past_end": false,
+	"show_encoding": true,
+	"show_full_path": true,
+	"show_minimap": true,
+	"show_tab_close_buttons": true,
+	"sidebar_default": true,
+	"soda_classic_tabs": false,
+	"soda_folder_icons": true,
+	"tab_height_short": true,
+	"tab_size": 4,
+	"tabs_small": true,
+	"theme": "Faarikaal Dark.sublime-theme",
+	"theme_green": false,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintageous_hlsearch": true,
+	"vintageous_incsearch": true,
+	"vintageous_reset_mode_when_switching_tabs": true,
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_sys_clipboard": true,
+	"wide_caret": false,
+	"word_wrap": true
+}
