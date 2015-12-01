@@ -71,10 +71,12 @@ declare -a casks=(
     shortcat
     skim
     skype
+    slack
     spotify
     sqlitebrowser
     sublime-text
     transmission
+    trello-x
     virtualbox
     vlc
     xquartz
