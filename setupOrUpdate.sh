@@ -30,6 +30,7 @@ declare -a brews=(
     htop-osx
     lynx
     node
+    osxfuse
     pandoc
     reattach-to-user-namespace
     ssh-copy-id
@@ -60,6 +61,7 @@ declare -a casks=(
     keka
     less
     libreoffice
+    macfusion
     mamp
     ngrok
     sequel-pro
@@ -162,6 +164,15 @@ brew upgrade brew-cask
 #command -v brew cask > /dev/null 2>&1 || { brew install caskroom/cask/brew-cask; }
 command -v brew cask > /dev/null 2>&1 || { brew install caskroom/cask/brew-cask; }
 
+# symlink dotfiles
+PWD=$(pwd)
+cd $HOME
+for i in $(ls -A dotfiles/)
+do
+    ln -s "$PWD/dotfiles/$i" "${i##*/}"
+done
+cd -
+
 # Install brew
 install_from_array 'brew install' "${brews[@]}"
 
@@ -235,15 +246,6 @@ curl https://fix-macosx.com/fix-macosx.py | python
 
 # Install Tmux Plugin Manager
 [[ ! -d  ~/.tmux/plugins/tpm ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# symlink shared settings from dropbox...
-PWD=$(pwd)
-cd $HOME
-for i in $(ls -A dotfiles/)
-do
-    ln -s "$PWD/dotfiles/$i" "${i##*/}"
-done
-cd -
 
 # Sublime Text: Copy package list
 cp extras/sublime/* $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
