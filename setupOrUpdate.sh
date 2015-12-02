@@ -29,7 +29,6 @@ declare -a brews=(
     ispell
     htop-osx
     lynx
-    mongodb
     node
     pandoc
     reattach-to-user-namespace
@@ -45,12 +44,10 @@ declare -a brews=(
 
 declare -a casks=(
     amethyst
-    android-studio
     appcleaner
     caffeine
     cakebrew
     cyberduck
-    dropbox
     firefox
     flux
     github
@@ -61,22 +58,18 @@ declare -a casks=(
     java
     karabiner
     keka
-    keycastr
     less
     libreoffice
-    licecap
     mamp
     ngrok
     sequel-pro
     shortcat
     skim
     skype
-    slack
     spotify
     sqlitebrowser
     sublime-text
     transmission
-    trello-x
     virtualbox
     vlc
     xquartz
@@ -174,12 +167,6 @@ install_from_array 'brew install' "${brews[@]}"
 # Install from cask
 install_from_array 'brew cask install' "${casks[@]}"
 
-# MongoDB
-mkdir -p /data/db
-ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
-# launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
-
 # Fix iTerm2 tab width
 defaults write com.googlecode.iterm2 OptimumTabWidth -int $(system_profiler SPDisplaysDataType | grep Resolution | sed 's/:/ /' | awk '{print $2}')
 # see https://www.iterm2.com/documentation-hidden-settings.html for more
@@ -227,13 +214,6 @@ npm install -g grunt-cli
 
 npm install -g coffee-script csslint http-server jscs jshint write-good
 npm install -g clean-css uglifycss js-beautify html-minifier uglify-js minjson svgo
-
-# MEAN
-npm install mongodb
-npm install express --save
-npm install express-generator -g
-npm install -g generator-meanjs
-gem install sass
 
 # Install fzf (command-line fuzzy finder), ctrl+t
 brew reinstall --HEAD fzf
