@@ -66,6 +66,7 @@ declare -a casks=(
     shortcat
     skim
     skype
+    slate
     spotify
     sqlitebrowser
     sublime-text
