@@ -165,6 +165,7 @@ brew upgrade brew-cask
 command -v brew cask > /dev/null 2>&1 || { brew install caskroom/cask/brew-cask; }
 
 # symlink dotfiles
+# ERROR HERE...
 PWD=$(pwd)
 cd $HOME
 for i in $(ls -A dotfiles/)
