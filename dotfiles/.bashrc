@@ -1,4 +1,11 @@
 # Aliases ----------------------------------------------------
+copykeys() {
+	cat .ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
+}
+
+alias ".."='cd ..'
+
+alias "..."='cd .. && cd ..'
 
 alias playpause='osascript -e "tell application \"iTunes\" to playpause"'
 
@@ -185,3 +192,5 @@ export EDITOR='subl -w' #Set Sublime Text as user's editor, w is to wait for Sub
 #export EDITOR='vim'
 #export EDITOR=emacs
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
