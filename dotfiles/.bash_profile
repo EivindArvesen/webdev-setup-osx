@@ -53,5 +53,5 @@ alias FUCK='fuck'
 ### MUST BE DONE LAST!
 # Setup tmux (attach, create or ignore session)
 if [ `which tmux 2> /dev/null` -a -z "$TMUX" ]; then
-    sh $HOME/src/Bash/webdev-setup/extras/tmuxAuto.sh
+    sh $HOME/src/Bash/webdev-setup-osx/extras/tmuxAuto.sh
 fi
