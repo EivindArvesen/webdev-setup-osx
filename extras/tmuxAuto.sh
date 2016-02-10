@@ -19,11 +19,11 @@ else
     CMD_2_5="ssh -t mozart \"cd /var/data/risp/xml/Green/Test && exec bash -l\""
     CMD_2_3="ssh -t mozart \"cd /var/data/risp/xml-drafts/green_internal/Test/Test/Playground && exec bash -l\""
     CMD_2_4="ssh -t mozart \"cd sites/risp && ls && git status && exec bash -l\""
-    CMD_2_2="ssh -t mozart \"sudo su && cd /var/spool/deployment/aquarius/live/sites/risp && exec bash -l\""
+    CMD_2_2="ssh -t mozart \"cd /var/spool/deployment/aquarius/live/sites/risp && sudo su && exec bash -l\""
 
     # Imbrium
     NAME_3="Imbrium"
-    CMD_3_1="ssh -t imbrium \"sudo bash && tail -f /var/log/apache2/error.log\""
+    CMD_3_1="ssh -t imbrium 'sudo bash -c \"tail -f /var/log/apache2/error.log\"'"
     CMD_3_2="ssh -t imbrium \"cd sites/moses/ && exec bash -l\""
 
     # Temp
@@ -76,8 +76,8 @@ else
     tmux split-window -v -p 50 -t $SESSION:4.2 &&
 
     tmux send-keys -t $SESSION:4.1 "clear && $CMD_4_1" C-m &&
-    tmux send-keys -t $SESSION:4.2 "clear && $CMD_4_2" C-m &&
-    tmux clock-mode -t $SESSION:4.3 &&
+    tmux send-keys -t $SESSION:4.3 "clear && $CMD_4_2" C-m &&
+    tmux clock-mode -t $SESSION:4.2 &&
 
 
     tmux attach -t $SESSION:4.4 &&
