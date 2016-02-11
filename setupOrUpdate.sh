@@ -254,7 +254,8 @@ cp extras/sublime/* $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
 mkdir -p $HOME/src/Bash/prm && git clone https://github.com/eivind88/prm.git $HOME/src/Bash/prm
 cp extras/tmuxAuto.sh $HOME/src/Bash/
 
-cp -r preferences/* $HOME/Library/Application\ Support/
+cp -r prefs/application_support/* $HOME/Library/Application\ Support/
+cp -r prefs/preferences/* $HOME/Library/Preferences/
 
 echo "All done!"
 echo "Remember to manually install fonts"
