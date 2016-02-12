@@ -74,6 +74,7 @@ declare -a casks=(
     sublime-text
     transmission
     virtualbox
+    vivaldi
     vlc
     xquartz
 )

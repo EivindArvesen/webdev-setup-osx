@@ -1,1 +1,3 @@
-# Setup up Mac for web development (including some personal preferences)
+# Setup up Mac for web development
+## (Opinionated)
+
