@@ -72,6 +72,8 @@
 		"LESS",
 		"Load file to REPL",
 		"Markdown Extended",
+		"Material Theme",
+		"Material Theme - Appbar",
 		"MaxPane",
 		"Minify",
 		"Missing Palette Commands",
@@ -136,6 +138,7 @@
 		"Themr",
 		"Tint",
 		"Vintageous",
-		"Xkcd"
+		"Xkcd",
+		"xpath"
 	]
 }
