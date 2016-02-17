@@ -1,6 +1,6 @@
 # Aliases ----------------------------------------------------
 copykeys() {
-	cat .ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
+	ssh $1 mkdir -p .ssh && cat .ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
 }
 
 alias ".."='cd ..'
