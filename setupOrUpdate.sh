@@ -49,6 +49,7 @@ declare -a casks=(
     caffeine
     cakebrew
     cyberduck
+    docker
     firefox
     flux
     github
@@ -73,6 +74,7 @@ declare -a casks=(
     sqlitebrowser
     sublime-text
     transmission
+    vagrant
     virtualbox
     vivaldi
     vlc
