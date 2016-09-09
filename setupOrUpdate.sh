@@ -48,6 +48,7 @@ declare -a casks=(
     appcleaner
     caffeine
     cakebrew
+    clipmenu
     cyberduck
     docker
     firefox
