@@ -53,7 +53,7 @@ declare -a casks=(
     docker
     firefox
     flux
-    github
+    github-desktop
     google-chrome
     honer
     imageoptim
@@ -61,11 +61,10 @@ declare -a casks=(
     java
     karabiner
     keka
-    less
     libreoffice
-    macfusion
     mamp
     ngrok
+    postman
     sequel-pro
     shortcat
     skim
@@ -169,14 +168,15 @@ brew upgrade brew-cask
 command -v brew cask > /dev/null 2>&1 || { brew install caskroom/cask/brew-cask; }
 
 # symlink dotfiles
+cp  dotfiles/.[!.]* ~/
 # ERROR HERE...
-PWD=$(pwd)
-cd $HOME
-for i in $(ls -A dotfiles/)
-do
-    ln -s "$PWD/dotfiles/$i" "${i##*/}"
-done
-cd -
+#PWD=$(pwd)
+#cd $HOME
+#for i in $(ls -A dotfiles/)
+#do
+#    ln -s "$PWD/dotfiles/$i" "${i##*/}"
+#done
+#cd -
 
 # Install brew
 install_from_array 'brew install' "${brews[@]}"
@@ -201,7 +201,11 @@ defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 # http://alanthing.com/blog/2013/03/17/virtualbox-extension-pack-with-one-line
 #
 # add --silent  to the curl command to silence download progress
-export version=$(/usr/bin/vboxmanage -v) &&
+
+#export version=$(/usr/bin/vboxmanage -v) &&
+# UPDATE TO WORK WITH BREW ON NEWER macOS VERSIONS...
+export version=$(/usr/local/bin/vboxmanage -v) &&
+
 export var1=$(echo ${version} | cut -d 'r' -f 1) &&
 export var2=$(echo ${version} | cut -d 'r' -f 2) &&
 export file="Oracle_VM_VirtualBox_Extension_Pack-${var1}-${var2}.vbox-extpack" &&
@@ -261,5 +265,6 @@ cp extras/tmuxAuto.sh $HOME/src/Bash/
 cp -r prefs/application_support/* $HOME/Library/Application\ Support/
 cp -r prefs/preferences/* $HOME/Library/Preferences/
 
+cp -r fonts/* ~/Library/Fonts
+
 echo "All done!"
-echo "Remember to manually install fonts"
