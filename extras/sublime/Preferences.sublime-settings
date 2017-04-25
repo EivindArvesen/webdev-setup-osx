@@ -24,7 +24,6 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 0,
 	"caret_style": "phase",
-	"centurion_color_blue": true,
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/SublimeLinter/CustomTomorrowNightBright (SL).tmTheme",
 	"detect_slow_plugins": true,
@@ -47,6 +46,7 @@
 	"file_exclude_patterns":
 	[
 		".DS_Store",
+		"*.js.map",
 		"*.pid",
 		"*.pyc",
 		"*.pyo"
@@ -70,18 +70,15 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"JavaScript",
 		"Vintage"
 	],
 	"inverse_caret_state": false,
-	"itg_sidebar_tree_large": false,
-	"itg_xsmall_tabs": true,
 	"line_numbers": true,
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"margin": 4,
 	"match_brackets_angle": true,
-	"numix_sidebar_tree_large": false,
-	"numix_xsmall_tabs": true,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
 	"remember_color_scheme": false,
@@ -96,13 +93,10 @@
 	"show_minimap": true,
 	"show_tab_close_buttons": true,
 	"sidebar_default": true,
-	"soda_classic_tabs": false,
-	"soda_folder_icons": true,
 	"tab_height_short": true,
 	"tab_size": 4,
 	"tabs_small": true,
 	"theme": "Faarikaal Dark.sublime-theme",
-	"theme_green": false,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintageous_hlsearch": true,
