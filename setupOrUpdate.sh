@@ -53,6 +53,7 @@ declare -a casks=(
     docker
     firefox
     flux
+    franz
     github-desktop
     google-chrome
     honer
@@ -249,7 +250,7 @@ brew cleanup
 brew cask cleanup
 
 # Install Miniconda (Anaconda Python)
-[[ ! -d $HOME/anaconda ]] && curl -L https://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh | bash
+[[ ! -d $HOME/anaconda ]] && curl -sSL https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -o /tmp/miniconda.sh && bash /tmp/miniconda.sh && rm /tmp/miniconda.sh
 
 # Fix macosx (restore privacy) - https://fix-macosx.com
 pip install pyobjc-core # workaround for long compile times
