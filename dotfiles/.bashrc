@@ -39,7 +39,7 @@ alias restart='sudo reboot'
 
 alias ql='qlmanage -p'
 
-alias te='open -e'
+alias edit='open -e'
 
 alias finder='open .'
 
@@ -154,7 +154,22 @@ fi
 #export PS3="\[$Cyan\]Select option->\[$Colour_Off\] "
 #export PS4="\[$Cyan\]+xtrace $LINENO->\[$Colour_Off\] "
 
-export PS1="\[${COLOR_CYAN}\]$USER\[${COLOR_GRAY}\]@\[${COLOR_RED}\]$HOSTNAME\[${COLOR_GRAY}\]: \[${COLOR_GREEN}\]\w > \[${COLOR_NC}\]"  # Primary prompt with only a path
+#export PS1="\[${COLOR_CYAN}\]$USER\[${COLOR_GRAY}\]@\[${COLOR_RED}\]$HOSTNAME\[${COLOR_GRAY}\]: \[${COLOR_GREEN}\]\w > \[${COLOR_NC}\]"  # Primary prompt with only a path
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[${COLOR_CYAN}\]$USER\[${COLOR_GRAY}\]@\[${COLOR_RED}\]$HOSTNAME\[${COLOR_GRAY}\]:\[${COLOR_GREEN}\]\W\[$(tput sgr0)\]\[${COLOR_YELLOW}\]\$(parse_git_branch)\[${COLOR_BLUE}\] > \[${COLOR_NC}\]"
+
+# RUN https://github.com/twolfson/sexy-bash-prompt
+export PROMPT_USER_COLOR=${COLOR_CYAN}
+export PROMPT_PREPOSITION_COLOR=${COLOR_GRAY}
+export PROMPT_DEVICE_COLOR=${COLOR_RED}
+export PROMPT_DIR_COLOR=${COLOR_GREEN}
+export PROMPT_GIT_STATUS_COLOR=${COLOR_YELLOW}
+export PROMPT_GIT_PROGRESS_COLOR=${COLOR_YELLOW}
+export PROMPT_SYMBOL_COLOR=${COLOR_GRAY}
+source ~/.bash_prompt 
 
 # This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
 # weird wrapping errors occur on some systems, so this method is superior
@@ -189,8 +204,5 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 
 # Editors ----------------------------------------------------------
 export EDITOR='subl -w' #Set Sublime Text as user's editor, w is to wait for Sublime Text window to close
-#export EDITOR='vim'
-#export EDITOR=emacs
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
