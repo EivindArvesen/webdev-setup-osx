@@ -237,7 +237,7 @@ npm install -g bower
 npm install -g grunt
 npm install -g grunt-cli
 
-npm install -g coffee-script csslint http-server jscs jshint write-good
+npm install -g eslint csslint http-server jscs jshint write-good
 npm install -g clean-css uglifycss js-beautify html-minifier uglify-js minjson svgo
 
 # Install fzf (command-line fuzzy finder), ctrl+t
