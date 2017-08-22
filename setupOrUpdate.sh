@@ -249,13 +249,17 @@ brew reinstall --HEAD fzf
 brew cleanup
 brew cask cleanup
 
-# Install Miniconda (Anaconda Python)
-[[ ! -d $HOME/anaconda ]] && curl -sSL https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -o /tmp/miniconda.sh && bash /tmp/miniconda.sh && rm /tmp/miniconda.sh
+# Install Miniconda2 (Minimal Anaconda Python Distribution)
+# ... though Anaconda2 will give you some nice tools, like Jupyter and Spyder
+[[ ! -d $HOME/anaconda ]] && [[ ! -d $HOME/anaconda2 ]] && [[ ! -d $HOME/miniconda ]] && [[ ! -d $HOME/miniconda2 ]] && curl -sSL https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -o /tmp/miniconda.sh && bash /tmp/miniconda.sh && rm /tmp/miniconda.sh
 
 # Fix macosx (restore privacy) - https://fix-macosx.com
 pip install pyobjc-core # workaround for long compile times
 pip install pyobjc
 curl https://fix-macosx.com/fix-macosx.py | python
+
+# Install haxor-news
+pip install haxor-news
 
 # Install Tmux Plugin Manager
 [[ ! -d  ~/.tmux/plugins/tpm ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
