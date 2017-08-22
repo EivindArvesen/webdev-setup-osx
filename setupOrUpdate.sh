@@ -75,6 +75,7 @@ declare -a casks=(
     sqlitebrowser
     sublime-text
     transmission
+    typora
     vagrant
     virtualbox
     vivaldi
