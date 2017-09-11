@@ -3,6 +3,17 @@ copykeys() {
 	ssh $1 mkdir -p .ssh && cat .ssh/id_rsa.pub | ssh $1 'cat >> .ssh/authorized_keys'
 }
 
+function docker-connect() {
+    docker exec -i -t $(docker ps | grep "$1" | grep -o '^\S*') /bin/bash
+}
+
+function grepout() {
+    git checkout $(git branch | grep -e "$1")
+}
+
+alias lg="git log --date-order --graph --decorate --pretty=format:'%C(yellow)%h%Creset %C(magenta)%d%Creset %s %C(blue)(%an)%Creset %C(green)%cr%Creset'"
+alias lga="git log --all --graph --decorate --pretty=format:'%C(yellow)%h%Creset - %C(green)%cr%Creset -%C(magenta)%d%Creset %s %C(blue)(%an)%Creset'"
+
 alias ".."='cd ..'
 
 alias "..."='cd .. && cd ..'
