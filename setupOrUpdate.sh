@@ -28,6 +28,7 @@ declare -a brews=(
     irssi
     ispell
     htop-osx
+    lolcat
     lynx
     node
     osxfuse
