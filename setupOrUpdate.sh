@@ -263,6 +263,10 @@ curl https://fix-macosx.com/fix-macosx.py | python
 # Install haxor-news
 pip install haxor-news
 
+# Install textract // for incomprehensible ex (sublime plugin)
+brew install poppler antiword unrtf tesseract swig
+pip install textract
+
 # Install Tmux Plugin Manager
 [[ ! -d  ~/.tmux/plugins/tpm ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
