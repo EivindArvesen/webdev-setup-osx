@@ -105,6 +105,8 @@ done
 defaults write -g AppleAquaColorVariant -int 6
 # Set highlight color to graphite
 defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
+# Set wallpaper to "Solid Gray Pro Ultra Dark"
+ osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/ Library/Desktop Pictures/Solid Colors/Solid Gray Pro Ultra Dark.png"'
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
 # Show indicator lights for open applications in the Dock
