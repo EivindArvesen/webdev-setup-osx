@@ -11,6 +11,10 @@ function docker-connect() {
     docker exec -i -t $(docker ps | grep "$1" | grep -o '^\S*') /bin/bash
 }
 
+function findPod() {
+    echo $(kubectl get pods --namespace "$2" | grep -e "$1" | cut -f 1 -d ' ' | head -n 1) 
+}
+
 function grepout() {
     git checkout $(git branch | grep -e "$1")
 }
